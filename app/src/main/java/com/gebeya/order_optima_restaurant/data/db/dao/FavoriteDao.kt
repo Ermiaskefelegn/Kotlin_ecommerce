@@ -10,7 +10,6 @@ import androidx.room.Transaction
 import androidx.room.Update
 import com.gebeya.order_optima_restaurant.data.db.entity.CartModel
 import com.gebeya.order_optima_restaurant.data.db.entity.FavouriteModel
-import com.gebeya.order_optima_restaurant.data.network.entity.ProductModel
 
 @Dao
 interface FavoriteDao {

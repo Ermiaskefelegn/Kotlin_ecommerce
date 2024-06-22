@@ -3,7 +3,7 @@ package com.gebeya.order_optima_restaurant.data.network.repository
 
 import com.gebeya.order_optima_restaurant.data.network.api.LoginRequest
 import com.gebeya.order_optima_restaurant.data.network.api.ShoppingApi
-import com.gebeya.order_optima_restaurant.data.network.entity.AuthenticationToken
+import com.gebeya.order_optima_restaurant.data.network.model.AuthenticationToken
 import com.gebeya.order_optima_restaurant.data.network.model.ProductsItem
 import com.gebeya.order_optima_restaurant.data.network.model.UserModel
 import com.gebeya.order_optima_restaurant.domain.repository.APIRepositoryDef

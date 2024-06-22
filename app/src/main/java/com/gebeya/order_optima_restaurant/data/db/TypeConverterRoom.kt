@@ -3,7 +3,7 @@ package com.gebeya.order_optima_restaurant.data.db
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.room.TypeConverter
-import com.gebeya.order_optima_restaurant.data.network.entity.OrderItem
+import com.gebeya.order_optima_restaurant.data.network.model.OrderItem
 import com.gebeya.order_optima_restaurant.data.network.model.ProductsItem
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

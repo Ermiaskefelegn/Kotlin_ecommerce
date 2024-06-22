@@ -60,7 +60,7 @@ import coil.request.ImageRequest
 import com.gebeya.order_optima_restaurant.R
 import com.gebeya.order_optima_restaurant.ViewModel.HomeViewModel
 import com.gebeya.order_optima_restaurant.data.db.entity.CartModel
-import com.gebeya.order_optima_restaurant.data.network.entity.OrderItem
+import com.gebeya.order_optima_restaurant.data.network.model.OrderItem
 import com.gebeya.order_optima_restaurant.ui.theme.componenets.CustomButton
 
 @Composable

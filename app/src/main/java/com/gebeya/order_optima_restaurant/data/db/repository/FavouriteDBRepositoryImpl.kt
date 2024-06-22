@@ -4,7 +4,6 @@ import com.gebeya.order_optima_restaurant.data.db.dao.CartDao
 import com.gebeya.order_optima_restaurant.data.db.dao.FavoriteDao
 import com.gebeya.order_optima_restaurant.data.db.entity.CartModel
 import com.gebeya.order_optima_restaurant.data.db.entity.FavouriteModel
-import com.gebeya.order_optima_restaurant.data.network.entity.ProductModel
 import com.gebeya.order_optima_restaurant.domain.repository.FavoriteDBRepository
 import com.gebeya.order_optima_restaurant.domain.repository.RestaurantDBRepository
 import kotlinx.coroutines.Dispatchers

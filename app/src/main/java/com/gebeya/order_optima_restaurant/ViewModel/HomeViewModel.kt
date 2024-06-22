@@ -8,7 +8,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gebeya.order_optima_restaurant.data.db.entity.CartModel
 import com.gebeya.order_optima_restaurant.data.db.entity.FavouriteModel
-import com.gebeya.order_optima_restaurant.data.network.entity.OrderDetailModel
 import com.gebeya.order_optima_restaurant.data.network.model.ProductsItem
 import com.gebeya.order_optima_restaurant.domain.repository.APIRepositoryDef
 import com.gebeya.order_optima_restaurant.domain.repository.FavoriteDBRepository
@@ -37,7 +36,6 @@ class HomeViewModel @Inject constructor(
     var cartList: List<CartModel> by mutableStateOf(listOf())
     var favouriteList: List<FavouriteModel> by mutableStateOf(listOf())
     var showDialog by  mutableStateOf(false)
-    var orderList: List<OrderDetailModel> by mutableStateOf(listOf())
 
     val totalPrice: MutableState<Double> = mutableStateOf(0.0)
     init {

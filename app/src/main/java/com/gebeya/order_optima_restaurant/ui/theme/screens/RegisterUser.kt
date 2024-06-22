@@ -28,7 +28,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -50,7 +49,6 @@ fun RegisterUser(
     navController: NavController
 ) {
     val authenticationViewmodel = hiltViewModel<AuthenticationViewmodel>()
-    val context = LocalContext.current
     var fname by rememberSaveable {
         mutableStateOf("")
     }
@@ -83,7 +81,7 @@ fun RegisterUser(
             .fillMaxWidth()
 //            .verticalScroll(rememberScrollState())
             .fillMaxHeight()
-            .padding(5.dp)
+
             .background(color = Color(0xFFF7F7F7)),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -261,7 +259,7 @@ fun RegisterUser(
 
             Row {
                 Text(
-                    text = "Don't You Have an Account?",
+                    text = "Already Have an Account?",
                     style = MaterialTheme.typography.bodyLarge.copy(
                         color = Color.Gray,
                         fontSize = 16.sp,

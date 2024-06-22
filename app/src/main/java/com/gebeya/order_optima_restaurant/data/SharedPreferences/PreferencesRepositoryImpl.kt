@@ -2,7 +2,7 @@ package com.gebeya.eventnotifier.data.SharedPreferences
 
 import android.app.Application
 import androidx.preference.PreferenceManager
-import com.gebeya.order_optima_restaurant.data.network.entity.AuthenticationToken
+import com.gebeya.order_optima_restaurant.data.network.model.AuthenticationToken
 import com.gebeya.order_optima_restaurant.domain.repository.PreferencesRepository
 import com.google.gson.Gson
 

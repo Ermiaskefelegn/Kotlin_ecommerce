@@ -1,8 +1,4 @@
-package com.gebeya.order_optima_restaurant.data.network.entity
-
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import java.util.UUID
+package com.gebeya.order_optima_restaurant.data.network.model
 
 
 data class OrderModel (

@@ -1,6 +1,6 @@
 package com.gebeya.order_optima_restaurant.data.network.api
 
-import com.gebeya.order_optima_restaurant.data.network.entity.AuthenticationToken
+import com.gebeya.order_optima_restaurant.data.network.model.AuthenticationToken
 import com.gebeya.order_optima_restaurant.data.network.model.ProductsItem
 import com.gebeya.order_optima_restaurant.data.network.model.UserModel
 import retrofit2.http.Body

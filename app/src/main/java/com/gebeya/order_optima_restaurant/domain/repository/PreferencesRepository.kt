@@ -1,6 +1,6 @@
 package com.gebeya.order_optima_restaurant.domain.repository
 
-import com.gebeya.order_optima_restaurant.data.network.entity.AuthenticationToken
+import com.gebeya.order_optima_restaurant.data.network.model.AuthenticationToken
 
 interface PreferencesRepository {
 

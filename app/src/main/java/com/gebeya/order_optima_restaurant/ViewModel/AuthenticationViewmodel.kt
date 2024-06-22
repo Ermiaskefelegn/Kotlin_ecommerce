@@ -104,7 +104,6 @@ class AuthenticationViewmodel @Inject constructor(
                 is ResultData.Success -> {
                     navController.navigate(Screens.LoginScreen.route)
                     println("Login result: ${result.data}")
-//                    Toast.makeText(context, "Employee Added", Toast.LENGTH_SHORT).show()
 
                 }
             }
