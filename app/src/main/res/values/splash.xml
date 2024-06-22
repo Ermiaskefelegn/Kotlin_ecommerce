@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="App.Starting.Theme" parent="Theme.Order_optima_restaurant">
+        <item name="windowSplashScreenBackground">#FFFF</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_main</item>
+        <item name="postSplashScreenTheme">@style/Theme.Order_optima_restaurant</item>
+
+    </style>
+</resources>
