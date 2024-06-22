@@ -1,22 +1,14 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
 # Preserve generic type information
 -keepattributes Signature
-# With R8 full mode generic signatures are stripped for classes that are not
- # kept. Suspend functions are wrapped in continuations where the type argument
- # is used.
--keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
 
- # R8 full mode strips generic signatures from return types if not kept.
+# With R8 full mode, preserve Continuation and retrofit2 classes
+-keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
+-keep,allowobfuscation,allowshrinking class retrofit2.Response
+
+# Keep Retrofit interfaces with annotations
 -if interface * { @retrofit2.http.* public *** *(...); }
 -keep,allowoptimization,allowshrinking,allowobfuscation class <3>
 
- # With R8 full mode generic signatures are stripped for classes that are not kept.
--keep,allowobfuscation,allowshrinking class retrofit2.Response
 # Keep Jetpack Compose classes
 -keep class androidx.compose.** { *; }
 -keep class androidx.activity.** { *; }
@@ -25,8 +17,8 @@
 
 # Keep all classes and methods in your package
 -keep class com.gebeya.order_optima_restaurant.** { *; }
-
-# Keep classes with specific annotations (if any)
+-keep class com.auth0.** { *; }
+# Keep classes with specific annotations
 -keep @interface com.gebeya.order_optima_restaurant.**
 
 # Prevent obfuscation of classes used by reflection
@@ -36,22 +28,17 @@
 -keep class kotlin.Metadata { *; }
 -keepclassmembers class kotlin.Metadata { *; }
 
-# Keep data classes
+# Keep data classes and their serialization methods
 -keepclassmembers class * {
     *** toJson();
     *** fromJson();
 }
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# Enable R8 specific optimizations
+-repackageclasses ''
+-allowaccessmodification
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# General ProGuard optimizations to reduce memory usage
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*

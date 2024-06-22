@@ -24,15 +24,17 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("/Users/ermiaskefelegn/AndroidStudioProjects/Order_optima_restaurant")
+            storeFile = file("/Users/ermiaskefelegn/AndroidStudioProjects/Order_optima_restaurant/shoppingkeystore")
             storePassword ="hulugram"
-            keyAlias ="your_key_alias"
+            keyAlias ="key0"
             keyPassword= "hulugram"
         }
     }
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
+
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
